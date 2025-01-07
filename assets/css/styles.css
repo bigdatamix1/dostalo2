@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYREGULAR.eot");
+    src: url("../fonts/SFPRODISPLAYREGULAR.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/SFPRODISPLAYREGULAR.woff") format("woff"),
+        url("../fonts/SFPRODISPLAYREGULAR.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYMEDIUM.eot");
+    src: url("../fonts/SFPRODISPLAYMEDIUM.eot") format("embedded-opentype"),
+        url("../fonts/SFPRODISPLAYMEDIUM.woff") format("woff"),
+        url("../fonts/SFPRODISPLAYMEDIUM.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYBOLD.eot");
+    src: url("../fonts/SFPRODISPLAYBOLD.eot") format("embedded-opentype"),
+        url("../fonts/SFPRODISPLAYBOLD.woff") format("woff"),
+        url("../fonts/SFPRODISPLAYBOLD.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../fonts/SFPRODISPLAYBOLD.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #070518;
+    font-family: "SF Pro Display", sans-serif;
+    color: #e8e8e8;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    width: 100%;
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #E8E8E8;
+    padding-left: 8px;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 12px 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.drop-zone {
+    width: 100%;
+    height: 272px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 16px;
+    background-color: #844CB029;
+    border: 2px solid #844CB066;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.drop-zone:hover {
+    background-color: #844CB066;
+}
+
+.svg-img {
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -60%);
+    z-index: 2;
+}
+
+.drop-zone p {
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #B587FF;
+    margin: 0;
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 16px #070518;
+}
+
+
+.drop-zone input[type="file"] {
+    display: none;
+}
+
+.drop-zone img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 16px;
+}
+
+.btn {
+    width: 100%;
+    height: 64px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:24px;
+    border: 1px;
+    opacity: 1;
+    background-color: #E86F00;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+.btn:disabled:hover {
+    transform: none;
+}
+
+button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 18px;
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 18px;
+    color: #B587FF;
+}
+
+.divider-text {
+    position: relative;
+}
+
+.divider-text::before,
+.divider-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 125px;
+    height: 2px;
+    background: linear-gradient(270deg, rgba(99, 49, 180, 0) 0%, #6331B4 100%);
+}
+
+.divider-text::before {
+    right: 100%;
+    margin-right: 12px; 
+    transform: rotate(180deg);
+}
+
+.divider-text::after {
+    left: 100%;
+    margin-left: 12px;
+}
+
+ul {
+    list-style-type: disc; 
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #B587FF;
+    opacity: 48%;
+    line-height: 24px;
+    margin: 0 auto; 
+    padding: 18px; 
+}
+
+li {
+    margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+    .header {
+        padding-bottom: 0;
+    }
+
+    .main-content {
+        margin: auto;
+        width: 400px;
+    } 
+}
+
+
+.loading-circle {
+    position: absolute;
+    top: 16.6%;
+    left: 40.3%;
+    width: 72px;
+    height: 72px;
+    border: 2px solid #E86F00;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    display: none; 
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
